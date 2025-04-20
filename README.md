@@ -21,6 +21,7 @@ For Job Seekers 👨‍💼👩‍💼
 ✅ Seamless navigation with React Router
 
 For Recruiters 🏢
+
 ✅ Edit & update profile details
 
 ✅ Recruiter Authentication (Sign up/Login)
@@ -60,3 +61,40 @@ State Management: Redux Toolkit
 API Calls: Axios
 
 UI Components: ShadCN UI, Lucide-React Icons
+
+🔹 How to Set Up the Project Locally
+
+👉 Clone the Repository
+
+git clone https://github.com/your-username/job-portal.git
+cd job-portal
+
+👉 Set Up the Backend
+
+cd backend
+npm install
+
+Create a .env file in the backend folder and add:
+
+PORT=your port
+MONGO_URI= your mongo db connection string
+JWT_SECRET=your_jwt_secret
+
+Start the backend server:
+
+npm start
+
+👉 Set Up the Frontend
+
+cd ../frontend
+npm install
+
+Start the frontend server:
+
+npm start
+
+👉 Visit the Application
+
+Open your browser and navigate to:
+
+http://localhost:3000
