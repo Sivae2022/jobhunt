@@ -66,7 +66,8 @@ UI Components: ShadCN UI, Lucide-React Icons
 
 👉 Clone the Repository
 
-git clone https://github.com/your-username/job-portal.git
+git clone https://github.com/Sivae2022/jobhunt.git
+
 cd job-portal
 
 👉 Set Up the Backend
