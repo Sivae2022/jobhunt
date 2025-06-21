@@ -20,7 +20,7 @@ const Applications = () => {
 
       try {
         setloading(true);
-        const response = await axios.get(`http://localhost:3000/api/recruiter/getjobapplications/${jobidstring}`, { withCredentials: true })
+        const response = await axios.get(`https://jobportal-render-deploy.onrender.com/api/recruiter/getjobapplications/${jobidstring}`, { withCredentials: true })
 
         if (response.data.applications) {
           // console.log("applications", response.data.applications);
@@ -42,7 +42,7 @@ const Applications = () => {
 
   const HandleUpdateStatus = async(appliedjobid,newStatus)=>{
     try {
-       const response = await axios.put(`http://localhost:3000/api/recruiter/updatejobstatus/${appliedjobid}`,{status:newStatus},{withCredentials:true})
+       const response = await axios.put(`https://jobportal-render-deploy.onrender.com/api/recruiter/updatejobstatus/${appliedjobid}`,{status:newStatus},{withCredentials:true})
        if(response.data){
        toast.success(response.data?.message || "Status updated successfully")
        console.log("update status",newStatus)

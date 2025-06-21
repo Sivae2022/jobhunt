@@ -26,7 +26,7 @@ const EditUserProfile = () => {
             
         console.log(data);
               try {
-                 const response = await axios.post("http://localhost:3000/api/user/updateprofile",data,{withCredentials:true})
+                 const response = await axios.post("https://jobportal-render-deploy.onrender.com/api/user/updateprofile",data,{withCredentials:true})
                  if(response.data){
                     console.log("update data",response.data);
                     toast.success(response.data?.message || "Profile updated successfully");

@@ -13,7 +13,7 @@ const Signup = () => {
     const onSubmit = async (data)=>{
             try {
                 setloading(true);
-                const response = await axios.post("http://localhost:3000/api/user/signup",data,{withCredentials:true});
+                const response = await axios.post("https://jobportal-render-deploy.onrender.com/api/user/signup",data,{withCredentials:true});
 
                 if(response.data){
                     toast.success("User created successfully");

@@ -24,7 +24,7 @@ const Navbar = () => {
 
     const handleLogout = async()=>{
       try {
-         const response = await axios.get("http://localhost:3000/api/user/logout",{withCredentials:true})
+         const response = await axios.get("https://jobportal-render-deploy.onrender.com/api/user/logout",{withCredentials:true})
          if(response.data){
             toast.success(response.data?.message || " logged out successfully");
             dispath(SetAuthUser(null))

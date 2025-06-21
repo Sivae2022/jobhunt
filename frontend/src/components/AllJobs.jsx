@@ -17,7 +17,7 @@ const AllJobs = () => {
     useEffect(() => {
         const fetchAllJobs = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/recruiter/getalljobs", { withCredentials: true })
+                const response = await axios.get("https://jobportal-render-deploy.onrender.com/api/recruiter/getalljobs", { withCredentials: true })
                 if (response.data) {
                     // console.log('jobs',response.data.Alljobs)
                     dispatch(SetJobs(response.data.Alljobs))

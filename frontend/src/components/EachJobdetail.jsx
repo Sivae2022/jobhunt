@@ -28,7 +28,7 @@ const user = useSelector((state)=>state.user.user)
             return
         }
         try {
-            const response = await axios.post(`http://localhost:3000/api/user/applyjob/${id}`,{},{withCredentials:true,headers:{
+            const response = await axios.post(`https://jobportal-render-deploy.onrender.com/api/user/applyjob/${id}`,{},{withCredentials:true,headers:{
                 Authorization: `Bearer ${user.token}`
             }})
             if(response.data){
@@ -44,7 +44,7 @@ const user = useSelector((state)=>state.user.user)
         const fetchjobdetail = async()=>{
             try {
                 setloading(true)
-                const response = await axios.get(`http://localhost:3000/api/recruiter/getEachjob/${id}`,{withCredentials:true})
+                const response = await axios.get(`https://jobportal-render-deploy.onrender.com/api/recruiter/getEachjob/${id}`,{withCredentials:true})
                 if(response.data){
                     setjob(response.data)
                 }

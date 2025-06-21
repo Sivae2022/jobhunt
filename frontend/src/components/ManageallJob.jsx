@@ -9,7 +9,7 @@ const ManageallJob = () => {
      
       const DeleteJob =async(id)=>{
          try {
-          const response = await axios.get(`http://localhost:3000/api/recruiter/deletejob/${id} `,{withCredentials:true})
+          const response = await axios.get(`https://jobportal-render-deploy.onrender.com/api/recruiter/deletejob/${id} `,{withCredentials:true})
           if(response.data){
              setJobs(Jobs.filter((item)=>item._id !== id))
           }
@@ -22,7 +22,7 @@ const ManageallJob = () => {
           const fetchjobs = async()=>{
             try {
               setloading(true);
-              const response = await axios.get("http://localhost:3000/api/recruiter/getrecruiterjobs",{withCredentials:true});
+              const response = await axios.get("https://jobportal-render-deploy.onrender.com/api/recruiter/getrecruiterjobs",{withCredentials:true});
               if(response.data){
                 // console.log("data",response.data);
                 setJobs(response.data.jobs.postedjobs)

@@ -112,7 +112,7 @@ const Footer = () => {
         </li>
       </ul>
       <p className="text-base text-center text-gray-500  max-lg:order-1">
-        ©  JobHunt 🏢  . Made by 💟 Nikhil rana.
+        ©  JobHunt 🏢  . Made by 💟 Siva E.
       </p>
       <ul className="flex justify-center gap-x-6 gap-y-2 flex-wrap">
         <li>

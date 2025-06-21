@@ -21,7 +21,7 @@ const UserAppliedjobs = () => {
         const fetchappliedjobs = async () => {
             try {
                 setloading(true)
-                const response = await axios.get('http://localhost:3000/api/user/appliedjobs', { withCredentials: true })
+                const response = await axios.get('https://jobportal-render-deploy.onrender.com/api/user/appliedjobs', { withCredentials: true })
                 if (response.data) {
                     // console.log("data",response.data.appliedjobs)
                     setappliedjobs(response.data.appliedjobs)

@@ -15,7 +15,7 @@ const Login = () => {
   const onSubmit = async (data) => {
        try {
         setloading(true);
-         const response = await axios.post("http://localhost:3000/api/user/login",data,{withCredentials:true});
+         const response = await axios.post("https://jobportal-render-deploy.onrender.com/api/user/login",data,{withCredentials:true});
          if(response.data){
           console.log(response.data.token);
           toast.success(response.data?.message || "User logged in successfully");

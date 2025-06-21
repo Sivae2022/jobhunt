@@ -15,7 +15,7 @@ const AddJobform = () => {
                 "company": data.company
              }
              try {
-                const response = await axios.post("http://localhost:3000/api/recruiter/createjob",formdata,{withCredentials:true})
+                const response = await axios.post("https://jobportal-render-deploy.onrender.com/api/recruiter/createjob",formdata,{withCredentials:true})
                 if(response.data){
                     toast.success(response.data?.message || "Job posted successfully");
                     reset();
