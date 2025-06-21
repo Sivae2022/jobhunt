@@ -94,8 +94,12 @@ export const Login = async(req,res)=>{
         }
       
         // create token //
-        const token = jwt.sign({id:user._id,role:role},process.env.JWT_SECRET,{expiresIn:"1d"});
-        res.cookie("token",token,{httpOnly:true});
+        const token = jwt.sign({id:user._id,role:role},process.env.JWT_SECRET,{expiresIn:"7d"});
+        res.cookie("token", token, { 
+            httpOnly: true,
+            secure: true,       
+            sameSite: 'None'    
+        });
         
         return res.status(200).json({message:"Login successfully",token,user});
         
