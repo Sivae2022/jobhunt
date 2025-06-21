@@ -40,6 +40,9 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("Error connecting to database", error)
 })
 
+app.get('/', (req, res) => {
+  res.send('Welcome to my Job Portal API!.It is working well');
+});
 
 
 app.listen(port,()=>{
